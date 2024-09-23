@@ -57,3 +57,18 @@ function calculateTotalHours(employeeName) {
     return 0;
   }
 }
+
+//testing function
+calculateTotalHours("John");
+
+
+
+//Function to List Employees with Free Days
+function listAvailableEmployees(day) {  //accepts a day as input and logs the names of employees who are not assigned a shift for that day.
+    const availableEmployees = employees.filter(
+      (emp) => !emp.shifts.some((shift) => shift.day === day)
+    );
+  
+    console.log(`Employees available on ${day}:`);
+    availableEmployees.forEach((emp) => console.log(emp.name));
+  }
