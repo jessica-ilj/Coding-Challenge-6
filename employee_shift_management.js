@@ -17,3 +17,8 @@ const employees = [
       console.log(`Day: ${shift.day}, Hours: ${shift.hours}`);
     });
   }
+
+  //usage example
+  displayEmployeeShifts(employees[0]); //for john. checking to see if the function works.
+
+  //Function to Assign a New Shift
