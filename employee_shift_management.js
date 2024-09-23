@@ -37,3 +37,23 @@ const employees = [
       console.log(`Employee ${employeeName} not found.`);
     }
   }
+
+  //seeing if it works.
+  assignShift("David", "Monday", 4);
+
+  //Function to Calculate Total Hours Worked
+function calculateTotalHours(employeeName) {
+  const employee = employees.find((emp) => emp.name === employeeName); //ccepts an employee name and calculates the total number of hours the employee has worked during the week by summing the hours from all shifts.
+
+  if (employee) {
+    const totalHours = employee.shifts.reduce(
+      (total, shift) => total + shift.hours,
+      0
+    );
+    console.log(`${employeeName} has worked a total of ${totalHours} hours.`);
+    return totalHours;
+  } else {
+    console.log(`Employee ${employeeName} not found.`);
+    return 0;
+  }
+}
