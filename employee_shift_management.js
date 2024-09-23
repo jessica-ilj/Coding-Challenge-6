@@ -9,3 +9,11 @@ const employees = [
      { name: 'Emily', shifts: [{ day: 'Friday', hours: 8 }] }
     
    ];
+
+   //Function to Display Employee Shift Details
+   function displayEmployeeShifts(employee) {   //accepts an employee object and logs the employee’s name and their assigned shifts (day and hours worked)
+    console.log(`Employee: ${employee.name}`);
+    employee.shifts.forEach((shift) => {
+      console.log(`Day: ${shift.day}, Hours: ${shift.hours}`);
+    });
+  }
