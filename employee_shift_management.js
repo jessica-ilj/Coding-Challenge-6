@@ -22,3 +22,18 @@ const employees = [
   displayEmployeeShifts(employees[0]); //for john. checking to see if the function works.
 
   //Function to Assign a New Shift
+  function assignShift(employeeName, day, hours) {
+    const employee = employees.find((emp) => emp.name === employeeName); //accepts an employee name, a day, and a number of hours
+  
+    if (employee) {
+      const hasShift = employee.shifts.some((shift) => shift.day === day);
+      if (hasShift) {
+        console.log(`Error: ${employeeName} already has a shift on ${day}.`); //error message if employee already has shift for that day
+      } else {
+        employee.shifts.push({ day, hours });
+        console.log(`Shift added: ${employeeName} - ${day}, ${hours} hours.`); //adding shift if employee is available
+      }
+    } else {
+      console.log(`Employee ${employeeName} not found.`);
+    }
+  }
