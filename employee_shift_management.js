@@ -72,3 +72,7 @@ function listAvailableEmployees(day) {  //accepts a day as input and logs the na
     console.log(`Employees available on ${day}:`);
     availableEmployees.forEach((emp) => console.log(emp.name));
   }
+  
+
+  //testing one last time
+  listAvailableEmployees("Monday");
